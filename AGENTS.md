@@ -1096,6 +1096,7 @@ Class-scoped teardown fixture that cleans up migrated VMs after each test class 
 | `ca_crt`                | CA certificate field (ca.crt) tests    |
 | `vsphere`               | VMware vSphere provider-specific tests |
 | `shared_disk`           | Shared disk migration tests            |
+| `ipv6`                  | IPv6 migration tests                   |
 
 **Marker requirements for collection-time skipping (MUST):**
 
@@ -1104,6 +1105,7 @@ Provider-type skip logic runs in `pytest_collection_modifyitems` (in `conftest.p
 - Warm migration tests → `@pytest.mark.warm`
 - Copy-offload snapshot tests → `@pytest.mark.copyoffload_snapshots`
 - CA certificate field tests → `@pytest.mark.ca_crt`
+- IPv6 tests → `@pytest.mark.ipv6`
 
 See the documented hook in `conftest.py` for how to add new provider-type skip rules.
 
